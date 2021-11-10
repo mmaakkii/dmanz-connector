@@ -42,7 +42,7 @@
     "react/react-in-jsx-scope": "off",
     "react-hooks/exhaustive-deps": "off",
     // NextJs specific fix: allow jsx syntax in js files
-    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }], //should add ".ts" if typescript project
+    
     // don't force return type
     "consistent-return": "off",
     "react/prop-types": "off",
@@ -96,18 +96,7 @@
     "jsx-a11y/label-has-associated-control": "off",
     //allow tsx extension
     "react/no-danger": "off",
-    "react/sort-comp": [
-      1,
-      {
-        "order": [
-          "static-methods",
-          "lifecycle",
-          "/^on.+$/",
-          "everything-else",
-          "render"
-        ]
-      }
-    ],
+    
     "no-restricted-globals": "off",
     "no-alert": "off"
   }

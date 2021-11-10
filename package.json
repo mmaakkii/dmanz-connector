@@ -13,7 +13,7 @@
     "prepublishOnly": "npm run lint",
     "test": "jest --verbose --forceExit",
     "lockfileCheck": "node scripts/verify-package-lock-file.js",
-    "prepare": "husky install && npm run build"
+    "prepare": "npm run build"
   },
   "dependencies": {
     "axios": "^0.21.1",
