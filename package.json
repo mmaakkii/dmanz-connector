@@ -10,7 +10,7 @@
     "build": "tsc",
     "lint": "eslint ./src --fix --ext .js,.ts,.tsx",
     "lintFix": "eslint ./src --ext .js,.ts,.tsx --fix",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "npm run lint",
     "test": "jest --verbose --forceExit",
     "lockfileCheck": "node scripts/verify-package-lock-file.js",
     "prepare": "husky install && npm run build"
