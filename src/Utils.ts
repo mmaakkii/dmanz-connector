@@ -1,4 +1,4 @@
-export const isServer = typeof window === 'undefined'
+// export const isServer = typeof window === 'undefined'
 
 export const capitalize = (value: any) => {
   if (isArray(value)) {
