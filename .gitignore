@@ -1,0 +1,5 @@
+node_modules
+.npmrc
+/__tests__/coverage/*
+lib
+.DS_Store

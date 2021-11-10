@@ -1,0 +1,58 @@
+{
+  "name": "@dmanz/connector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint ./src --fix --ext .js,.ts,.tsx",
+    "lintFix": "eslint ./src --ext .js,.ts,.tsx --fix",
+    "prepublishOnly": "npm test && npm run lint",
+    "test": "jest --verbose --forceExit",
+    "lockfileCheck": "node scripts/verify-package-lock-file.js",
+    "prepare": "husky install && npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "debug": "^4.3.2",
+    "elasticsearch": "^16.7.2",
+    "http-errors": "^1.8.0",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "redis": "^3.0.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.14.5",
+    "@types/debug": "^4.1.7",
+    "@types/elasticsearch": "^5.0.38",
+    "@types/http-errors": "^1.8.1",
+    "@types/jest": "^27.0.1",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/redis": "^2.8.31",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmaakkii/dmanz-connector.git"
+  },
+  "author": "Makki Omer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmaakkii/dmanz-connector/issues"
+  },
+  "homepage": "https://github.com/mmaakkii/dmanz-connector#readme"
+}

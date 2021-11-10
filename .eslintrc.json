@@ -1,0 +1,118 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    // "plugin:react-hooks/recommended",
+    // always put prettier at last
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "useJSXTextNode": true,
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "createDefaultProgram": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["jest","@typescript-eslint", "prettier"],
+  
+  "rules": {
+    // NextJs specific fix: suppress errors for missing 'import React' in files for nextjs
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "off",
+    // NextJs specific fix: allow jsx syntax in js files
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }], //should add ".ts" if typescript project
+    // don't force return type
+    "consistent-return": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars-experimental": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "array-callback-return": "off",
+    "no-underscore-dangle": "off",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "guard-for-in": "off",
+    "no-restricted-syntax": "off",
+    "func-names": "off",
+    "react/button-has-type": "off",
+    "react/no-unescaped-entities": "off",
+    "react/display-name": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.spec.tsx",
+          "**/*.spec.jsx",
+          "**/*.spec.ts",
+          "utils/test-utils.tsx"
+        ]
+      }
+    ],
+    "import/extensions": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    //don't need href on a tag with Next router
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        "variables": false
+      }
+    ],
+    "no-console": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "prettier/prettier": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    //allow tsx extension
+    "react/no-danger": "off",
+    "react/sort-comp": [
+      1,
+      {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "/^on.+$/",
+          "everything-else",
+          "render"
+        ]
+      }
+    ],
+    "no-restricted-globals": "off",
+    "no-alert": "off"
+  }
+}
