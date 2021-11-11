@@ -1,3 +1,5 @@
+import { randomBytes } from 'crypto'
+
 export const isServer = typeof window === 'undefined'
 
 export const capitalize = (value: any) => {
@@ -49,3 +51,8 @@ export const parseFormData = (formData) => {
 }
 
 export const jsRange = (n) => Array.from(Array(n).keys())
+
+export const createUIDWithPrefix = (prefix: string): string => {
+  const token = randomBytes(10).toString('hex')
+  return `${prefix}_${token}`
+}
