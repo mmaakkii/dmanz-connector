@@ -18,3 +18,17 @@ export const createToken = (): CreateToken => {
   const hashedToken = createHashedToken(token)
   return { token, hashedToken }
 }
+
+export const createRandomPassword = (length = 10): string => {
+  const charSet = 'abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ123456789'
+  let value = ''
+  const n = charSet.length
+  for (let i = 0; i < length; ++i) {
+    value += charSet.charAt(Math.floor(Math.random() * n))
+  }
+  const hasNumbers = /\d/.test(value)
+  if (!hasNumbers) {
+    value += Math.floor(Math.random() * n)
+  }
+  return value
+}
