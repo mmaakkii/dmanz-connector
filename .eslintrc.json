@@ -35,14 +35,14 @@
       "version": "detect"
     }
   },
-  "plugins": ["jest","@typescript-eslint", "prettier"],
-  
+  "plugins": ["jest", "@typescript-eslint", "prettier"],
+
   "rules": {
     // NextJs specific fix: suppress errors for missing 'import React' in files for nextjs
     "react/react-in-jsx-scope": "off",
     "react-hooks/exhaustive-deps": "off",
     // NextJs specific fix: allow jsx syntax in js files
-    
+
     // don't force return type
     "consistent-return": "off",
     "react/prop-types": "off",
@@ -80,23 +80,17 @@
     "react/jsx-props-no-spreading": "off",
     "react/require-default-props": "off",
     //don't need href on a tag with Next router
-    "no-use-before-define": [
-      "error",
-      {
-        "functions": false,
-        "classes": false,
-        "variables": false
-      }
-    ],
+    "no-use-before-define": "off",
     "no-console": "off",
     "no-plusplus": "off",
     "no-param-reassign": "off",
+    "no-useless-catch": "off",
     "no-shadow": "off",
     "prettier/prettier": "off",
     "jsx-a11y/label-has-associated-control": "off",
     //allow tsx extension
     "react/no-danger": "off",
-    
+
     "no-restricted-globals": "off",
     "no-alert": "off"
   }
