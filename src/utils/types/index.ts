@@ -20,7 +20,7 @@ export interface CreateJWTOptions {
 }
 
 export interface DecodeJWTCompleteResponse<T> {
-  payload: T & { iat: number; exp: number }
+  payload: T & Record<string, any>
   header: any
   signature: any
 }

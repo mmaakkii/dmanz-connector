@@ -1,6 +1,6 @@
 {
   "name": "@dmanz/connector",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "",
   "main": "./lib/index.js",
   "directories": {
@@ -25,7 +25,7 @@
     "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
     "redis": "^3.0.2",
-    "winston": "^3.2.1"
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.14.5",
