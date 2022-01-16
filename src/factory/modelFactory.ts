@@ -60,13 +60,19 @@ export class ModelFactory implements IModelFactory {
     }
   }
 
-  async getOne(identifier: TIdentifier, identifierFieldName: string) {
+  async getOne(
+    identifier: TIdentifier,
+    identifierFieldName: string,
+    checkEnabled = false
+  ) {
     try {
       const query = {
         [identifierFieldName]: identifier,
         isDeleted: false
       }
-      console.log('q', query)
+      if (checkEnabled) {
+        query.enabled = true
+      }
       const doc = await this.model.findOne(query)
       if (doc) {
         this.responseObj.data = doc
